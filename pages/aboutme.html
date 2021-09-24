@@ -5,7 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel='stylesheet' type='text/css' href='../css/main.css'/>
-		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
 		<title>Lawrence Chillrud</title>
 	</head>
 	<body>
@@ -13,27 +14,23 @@
 			<h1>Lawrence Chillrud</h1>
 			<img src="../images/grapefruit.jpg", title = "Me enjoying a glass of grapefruit juice">
 			<figcaption>Me enjoying a glass of grapefruit juice. Photo by Miranda Simes.</figcaption>
-			<br>
-			<ul id='links'>
-				<li>
-					<a href="../index.html">Home</a>
-				</li>
-				<li>
-					<label id = 'aclick'><strong>About Me</strong></label>
-				</li>
-				<li>
-					<a href="publications.html">Publications</a>
-				</li>
-				<li>
-					<a href="projects.html">Projects</a>
-				</li>
-				<li>
-					<a href="contact.html">Contact</a>
-				</li>
-				<li>
-					<a href="../files/LawrenceChillrud_CV.pdf" target="_blank">CV</a>
-				</li>
-			</ul>
+			<div class='nav'>
+                <ul class='wrap'>
+                    <li><a href='../index.html'>Home</a></li>
+                    <li><a class="active" href="aboutme.html">About Me</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <div class="nav-right">
+                        <li><a class="ai ai-cv ai-1x" href="../files/LawrenceChillrud_CV.pdf" target="_blank"></a></li>
+                        <li><a class="fa fa-github fa-1x" href="https://github.com/lawrence-chillrud" target="_blank"></a></li>
+                        <li><a class="ai ai-google-scholar ai-1x" href="https://scholar.google.com/citations?user=HrSjGh0AAAAJ&hl=en&oi=ao" target="_blank"></a></li>
+                        <li><a class="ai ai-orcid ai-1x" href="https://github.com/lawrence-chillrud" target="_blank"></a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
 			<h3>Research</h3>
 			<p>
 				I am a senior programmer at Columbia University's <a href="http://www.publichealth.columbia.edu">Mailman School of Public Health</a>, working in the <a href="http://www.publichealth.columbia.edu/become-student/departments/environmental-health-sciences-ehs">Department of Environmental Health Sciences</a>. Broadly, I'm interested in developing and applying machine learning and artificial intelligence algorithms for problems in public health and clinical healthcare / medicine. 
@@ -46,9 +43,8 @@
 			</p>
 			<h3>Education</h3>
 			<p>
-				I graduated from Columbia University in May of 2020 with a BA in Computer Science, specializing in Intelligent Systems. 
+				I graduated from <a href="https://www.columbia.edu">Columbia University</a> in May of 2020 with a BA in Computer Science, specializing in Intelligent Systems. 
 			</p>
 		</div>
-		
 	</body>
 </html>
