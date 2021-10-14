@@ -3,6 +3,7 @@
  * 9/27/21
  */
 
+/*font across the website*/
 body {
 	color: rgba(0, 0, 0, 0.8);
 	font-family: -apple-system, Helvetica, arial, sans-serif;
@@ -10,19 +11,20 @@ body {
 	margin: 0;
 	padding: 0;
 }
-a {
-	/* color: rgba(0, 0, 0, 0.8); */
-	color: darkred;
-	text-decoration: none;
-	/*font-weight: bold;*/
+/*User selected text highlighting control*/
+::selection {
+  background: #EFD469; /* WebKit/Blink Browsers */
 }
-#aclick {
-	color: darkred;
+::-moz-selection {
+  background: #EFD469; /* Gecko Browsers */
+}
+/*Hyperlinks across the website*/
+a {
+	color: #AD2A1A;
 	text-decoration: none;
 }
 a:hover {
-	/* color: rgba(0, 0, 0, 0.8); */
-	color:  darkred;
+	color: #F26D21;
 	text-decoration: underline;
 }
 h1 {
@@ -41,43 +43,6 @@ h1 {
 	margin-right: auto;
 	display: block;
 }
-#content {
-	max-width: 800px;
-	margin: 100px auto;
-	margin-top: -80px;
-	line-height: 1.5em;
-}
-ul#links {
-	list-style-type: none;
-	padding-left: 0;
-	margin: 0 0 20px 0;
-}
-ul#links li {
-	font-family: -apple-system, helvetica, arial, sans-serif;
-	display: inline;
-	margin-right: 25px;
-	font-size: 18px;
-}
-ul#links li a:hover {
-	text-decoration: underline;
-}
-
-ul#links li a
-ul#links li#contact {
-	font-family: courier;
-	margin: 0;
-}
-.section ul {
-	padding-left: 15px;
-}
-.caption {
-	color: rgba(0, 0, 0, 0.5);
-	margin-top: -3px;
-	font-size: 10px;
-	padding: 0;
-	float: right;
-	font-style: italic;
-}
 FIGURE, FIGCAPTION {
 	display: block;
 	font-style: italic;
@@ -88,68 +53,105 @@ FIGURE, FIGCAPTION {
 	margin-right: auto;
 	display: block;
 }
-.nav,
-#papers {
+#content {
 	max-width: 800px;
 	margin: 100px auto;
-}
-#papers {
 	margin-top: -80px;
 	line-height: 1.5em;
 }
-#papers h2 {
-	margin-top: 30px;
+#content img{
+	display: inline;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 25px;
+	float: right;
+	width: 200px;
+	height: auto;
+}
+#content .paper-row {
 	margin-bottom: 20px;
 }
-#papers .paper-row {
-	margin-bottom: 20px;
-}
-#papers .paper-title,
-#papers .paper-authors,
-#papers .paper-venue,
-#papers .paper-abstract,
-#papers .paper-links {
+#content .paper-title,
+#content .paper-authors,
+#content .paper-venue,
+#content .paper-abstract,
+#content .paper-links {
 	margin: 0;
 }
-#papers .pub-links {
+#content .pub-links {
 	list-style-type: none;
 	padding-left: 0;
-	margin-top: 0;
+	margin-top: 5px;
 }
-#papers .pub-links li {
+#content .pub-links li {
 	display: inline;
-	padding-right: 10px;
+	margin-right: 20px;
+	padding: 5px;
+	border: 1px;
+	border-style:solid;
+	border-color: #AD2A1A;
+	border-radius: 15px;
 }
+
+#content .pub-links li:hover {
+	border-color: #F26D21;
+}
+
+#content .pub-links li a:hover {
+	color: #F26D21;
+	text-decoration: none;
+}
+
+/* Create two equal columns that floats next to each other */
+.row {
+	display: flex;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*Navigation bar*/
 .nav {
 	margin-top: -5px;
 	margin-bottom: -5px;
 }
-
 .nav a {
-	color: darkred;
+	color: #AD2A1A;
 	text-decoration: none;
 	border-bottom: none;
-	font-size: 18px;
+	font-size: 20px;
 	float: left;
 	text-align: center;
 	margin-right: 25px;
 }
 .nav a:hover {
   	text-decoration: underline;
+  	color: #F26D21;
 }
 .nav a.active {
   font-weight: bold;
   cursor: default;
   text-decoration: none;
+  color: #AD2A1A;
 }
 .nav-right {
   float: right;
   text-align: center;
-  margin-right: -60px;
-  font-size: 18px;
+  margin-right: -50px;
+  margin-top: -2px;
   padding-top: 1px;
   padding-right: -10px;
   border-bottom: none;
+}
+.nav-right a {
+  font-size: 26px;
 }
 .nav ul {
 	list-style-type: none;
@@ -159,32 +161,29 @@ FIGURE, FIGCAPTION {
 	display: inline;
 	margin-right: 10px;
 }
-
+/*Designate code font*/
+#code {
+	font-family: Courier;
+}
+/*CSS to render LaTeX*/
 .tex sub, .latex sub, .latex sup {
 	text-transform: uppercase;
 }
-
 .tex sub, .latex sub {
 	vertical-align: -0.5ex;
     margin-left: -0.1667em;
     margin-right: -0.125em;
 }
-
 .tex, .latex, .tex sub, .latex sub {
     font-size: 1em;
 }
-
 .latex sup {
     font-size: 0.85em;
     vertical-align: 0.15em;
     margin-left: -0.36em;
     margin-right: -0.15em;
 }
-#code {
-	font-family: Courier;
-}
-/* Mobile.
- */
+/* Mobile.*/
 @media screen and (max-width: 600px) {
 	body {
 		margin: 0 10px !important;
@@ -203,5 +202,33 @@ FIGURE, FIGCAPTION {
 	}
 	.nav ul li {
 		display: block;
+	}
+	.nav-right a {
+  	display: inline;
+  	float: left;
+  	text-align: center;
+	}
+
+	.nav {
+		margin-top: -5px;
+		margin-bottom: 20px;
+	}
+
+	.nav ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	.nav ul li {
+		display: inline;
+		margin-right: 10px;
+	}
+
+	.column {
+    width: 100%;
+  }
+
+  #content img{
+		display: none;
 	}
 }
