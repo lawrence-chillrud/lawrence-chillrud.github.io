@@ -48,7 +48,7 @@
                 <p class='paper-abstract'>
                     I am working to adapt and extend Principal Component Pursuit (PCP), a robust dimensionality reduction technique from computer vision, for pattern recognition with environmental mixtures data. The motivation is for PCP to aid in epidemiological studies by decomposing an exposure matrix into: (1) a low rank component encoding the consistent patterns of exposure; and (2) a sparse component capturing unique and outlying exposure events not explained by the identified exposure patterns. These two pieces can then be used in health models to assess possible associations between environmental exposures and various health outcomes. In this work, we engineer and apply PCP to a variety of public health domains and data, including ambient air pollution, exposomic, and metabolomic data. We are exploring both convex and non-convex optimization approaches to PCP. We are also in the middle of developing an open source R package so other researchers can apply PCP to their studies (see code linked below).
                 </p>
-                <ul class='pub-links'> <li> <a href='https://github.com/Columbia-PRIME/pcpr' target='_blank'>pcpr</a> </li> <li><a href="https://github.com/Columbia-PRIME/PCPhelpers" target="_blank">PCPhelpers</a></li></ul>
+                <ul class='pub-links'><li><a href='https://github.com/Columbia-PRIME/pcpr' target='_blank'>pcpr</a> </li><li><a href="https://github.com/Columbia-PRIME/PCPhelpers" target="_blank">PCPhelpers</a></li></ul>
             </div>
             <div class='paper-row'>
                 <p class='paper-title'>
@@ -57,7 +57,7 @@
                 <p class='paper-abstract'>
                     I am working to develop a Bayesian Non-parametric Ensemble model for uncertainty characterization in PM<sub>2.5</sub> predictions across the contiguous United States. For more information see an old paper by some of my colleagues below. 
                 </p>
-                <ul class='pub-links'> <li> <a href='https://arxiv.org/pdf/1911.04061.pdf' target='_blank'>PDF</a> </li> </ul>
+                <ul class='pub-links'><li><a href='https://arxiv.org/pdf/1911.04061.pdf' target='_blank'>PDF</a></li></ul>
             </div>
             <div class='paper-row'>
                 <p class='paper-title'>
@@ -75,7 +75,7 @@
                 <p class='paper-abstract'>
                     In this work, I helped develop, train, and evaluate a RoBERTa-based fact-checking model to combat misinformation surrounding: (1) COVID-19; (2) climate-change; and (3) the 2020 US presidential election. To train and test the COVID-19-specific model, I compiled a COVID-19-specific dataset by crawling the web and scraping millions of online news articles for claims regarding COVID-19 before mapping them to relevant scientific papers. My colleagues and I then wrote an IRB protocol to receive approval for human annotators to help tag the dataset with information needed for the fact-checking model. Once our annotators were cleared to begin work, I trained and supervised the annotation team. I also assisted in the development, implementation, and maintenance of a user-friendly, web-based annotation interface to facilitate the annotations, using the popular NoSQL database MongoDB to do so. Primarily, I explored various NLP approaches to the fact-checking problem and pipeline in Python, including but not limited to: BERT-based architectures, claim detection, unsupervised data augmentation, semi-supervised learning, transfer learning, named entity recognition, TF-IDF, few-shot learning, and more.
                 </p>
-                <ul class='pub-links'> <li> <a href='http://workshop-proceedings.icwsm.org/pdf/2021_39.pdf' target='_blank'>PDF</a> </li> <li><a href="https://github.com/posuer/scifact" target="_blank">Model Code</a></li><li><a href="https://github.com/posuer/COVID-19_misinfo_checking">Scraping Code</a></li></ul>
+                <ul class='pub-links'><li><a href='http://workshop-proceedings.icwsm.org/pdf/2021_39.pdf' target='_blank'>PDF</a></li><li><a href="https://github.com/posuer/scifact" target="_blank">Model Code</a></li><li><a href="https://github.com/posuer/COVID-19_misinfo_checking">Scraping Code</a></li></ul>
             </div>
             <div class='paper-row'>
                 <p class='paper-title'>
@@ -84,7 +84,7 @@
                 <p class='paper-abstract'>
                     This was a project I completed as a volunteer for Georgia's <em>Get Out the Vote</em> campaign. I wrote a Python web-crawler to scrape a few of Georgia's county jails for relevant contact information in order to help send voter registration and ballot information to every incarcerated person in Georgia before the 2020 Georgia State Senate runoff elections.
                 </p>
-                <ul class='pub-links'> <li> <a href='https://github.com/lawrence-chillrud/scraping_ga_jails' target='_blank'>Code</a> </li> </ul>
+                <ul class='pub-links'><li><a href='https://github.com/lawrence-chillrud/scraping_ga_jails' target='_blank'>Code</a></li></ul>
             </div>
             <div class='paper-row'>
                 <p class='paper-title'>
@@ -93,7 +93,7 @@
                 <p class='paper-abstract'>
                 	In this project, I wrote <span id='code'>ClaimDetective</span>, a Python class that allows the user to rank a list of sentences (i.e. potential claims) in order of most check-worthy to least check-worthy, i.e. the priority with which they should be fact-checked. <span id='code'>ClaimDetective</span> was built with a deep-learning model that fine-tunes RoBERTa under-the-hood to identify and rank claims that are worth fact-checking. I implemented <span id='code'>ClaimDetective</span> with <span id="code">PyTorch</span> and <span id="code">Scikit-learn</span>. This work was done during my time as a natural language processing research assistant.
                 </p>
-                <ul class='pub-links'> <li> <a href='https://github.com/lawrence-chillrud/ClaimDetective' target='_blank'>Code</a></li><li><a href='https://github.com/lawrence-chillrud/ClaimDetective-Training' target='_blank'>Training</a></li></ul>
+                <ul class='pub-links'><li><a href='https://github.com/lawrence-chillrud/ClaimDetective' target='_blank'>Code</a></li><li><a href='https://github.com/lawrence-chillrud/ClaimDetective-Training' target='_blank'>Training</a></li></ul>
             </div>
             <div class='paper-row'>
                 <p class='paper-title'>
@@ -102,7 +102,7 @@
                 <p class='paper-abstract'>
                     At the beginning of the COVID-19 pandemic, I designed, trained, and evaluated a convolutional neural network (CNN) that classified chest x-ray images into one of four classes: Viral Pneumonia, Bacterial Pneumonia, COVID-19, and Healthy. I implemented the CNN in Python with <span id="code">TensorFlow</span> and <span id="code">Keras</span>. I also wrote a 31-page report in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> summarizing the results of the final model. The report included a detailed error analysis and an interpretability section that aimed to help clinicians and front-line workers learn which aspects of the chest x-rays the model used to successfully diagnose patients. 
                 </p>
-                <ul class='pub-links'> <li> <a href='https://github.com/lawrence-chillrud/cnn-covid-xrays' target='_blank'>Code</a></li><li> <a href='../files/COVID_Xrays_Report.pdf' target='_blank'>Report</a></li> </ul>
+                <ul class='pub-links'><li><a href='https://github.com/lawrence-chillrud/cnn-covid-xrays' target='_blank'>Code</a></li><li><a href='../files/COVID_Xrays_Report.pdf' target='_blank'>Report</a></li></ul>
             </div>
             <div class='paper-row'>
                 <p class='paper-title'>
@@ -111,7 +111,7 @@
                 <p class='paper-abstract'>
                     I performed a preliminary RNA secondary structure analysis of SARS-CoV-2’s spike (S) gene coding region of its genome across inter- and intraspecies datasets to identify conserved structures that could be targeted when making a vaccine. My analysis identified 15 potentially conserved structures within the interspecies dataset, as well as 43 at the intraspecies level. For the project, I wrote a custom algorithm to perform the RNA secondary structural analysis identifying conserved sites. I also wrote a Bioinformatics-style Applications Note in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> to summarize the project.
                 </p>
-                <ul class='pub-links'> <li> <a href='https://github.com/lawrence-chillrud/SARS-CoV-2-Seq-Analysis' target='_blank'>Code</a></li><li> <a href='../files/SARS-CoV-2-S-Report.pdf' target='_blank'>Report</a></li> </ul>
+                <ul class='pub-links'><li><a href='https://github.com/lawrence-chillrud/SARS-CoV-2-Seq-Analysis' target='_blank'>Code</a></li><li><a href='../files/SARS-CoV-2-S-Report.pdf' target='_blank'>Report</a></li></ul>
             </div>
 		</div>
 	</body>
