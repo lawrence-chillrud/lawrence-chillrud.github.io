@@ -1,12 +1,12 @@
 /* Lawrence Chillrud
- * <lgc2139@cumc.columbia.edu>
- * 9/27/21
+ * <chili@u.northwestern.edu>
+ * 10/08/2025
  */
 
 /*font across the website*/
 body {
-	color: rgba(0, 0, 0, 0.8);
-	font-family: -apple-system, Helvetica, arial, sans-serif;
+	color: rgb(0, 0, 0);
+	font-family: "aktiv-grotesk", -apple-system, Helvetica, arial, sans-serif;
 	font-size: 16px;
 	margin: 0;
 	padding: 0;

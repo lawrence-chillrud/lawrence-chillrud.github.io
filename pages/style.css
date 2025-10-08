@@ -64,7 +64,7 @@
   body {
     background: #fff;
     color: #000;
-    font-family: "alte_haas_grotesk_regular", "Helvetica Neue", Helvetica, Arial;
+    font-family: "aktiv-grotesk", "alte_haas_grotesk_regular", "Helvetica Neue", Helvetica, Arial;
     overflow-x: hidden;
     margin-top: 5px;
     padding: 45px 90px;
@@ -100,13 +100,13 @@
   }
   
   body main>h1 {
-    font-family: "alte_haas_grotesk_bold", "Helvetica Neue", Helvetica, Arial;
+    font-family: "aktiv-grotesk", "alte_haas_grotesk_bold", "Helvetica Neue", Helvetica, Arial;
     font-size: 36px;
     /* text-transform: capitalize; */
   }
   
   body main>h2 {
-    font-family: "alte_haas_grotesk_regular",
+    font-family: "aktiv-grotesk", "alte_haas_grotesk_regular",
       "Helvetica Neue", Helvetica, Arial;
     font-size: 28px;
     /* text-transform: capitalize; */
@@ -121,7 +121,7 @@
   }
   
   body main>ul {
-    font-family: "alte_haas_grotesk_regular", "Helvetica Neue", Helvetica, Arial;
+    font-family: "aktiv-grotesk", "alte_haas_grotesk_regular", "Helvetica Neue", Helvetica, Arial;
     font-size: 14px;
     line-height: 20px
   }
