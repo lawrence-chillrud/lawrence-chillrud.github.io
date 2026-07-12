@@ -415,7 +415,15 @@
 				}));
 
 				itemsContainer.innerHTML = rendered.join('');
-				Fancybox.bind('[data-fancybox]', {});
+				Fancybox.bind('[data-fancybox]', {
+					Carousel: {
+						Zoomable: {
+								Panzoom: {
+									clickAction: 'iterateZoom',
+								}
+						}
+					}
+				});
 			}
 
 			async function init() {
