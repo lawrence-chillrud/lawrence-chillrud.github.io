@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-E81JT6QMRV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-E81JT6QMRV');
+		</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Items for Sale</title>
+		<link rel="stylesheet" href="https://use.typekit.net/nhu7kkk.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+		<meta property="og:title" content="Items for Sale">
+		<meta property="og:description" content="Furniture, appliances, and household items for sale before moving out.">
+		<meta property="og:image" content="../media/stuff_to_sell_web/sofa1.webp">
+		<meta property="og:url" content="https://lawrence-chillrud.github.io/pages/selling.html">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Items for Sale">
+		<meta property="og:locale" content="en_US">
+		<style>
+			body {
+				padding-bottom: 80px;
+			}
+
+			body main.page {
+				max-width: 980px;
+			}
+
+			body main > p.intro {
+				max-width: 760px;
+				margin: 12px 0 18px;
+			}
+
+			.status {
+				font-size: 16px;
+				line-height: 24px;
+				margin-top: 24px;
+			}
+
+			.status.error {
+				border-left: 3px solid #000;
+				padding-left: 12px;
+			}
+
+			body main > ul.jump {
+				max-width: 760px;
+				margin: 18px 0 30px;
+			}
+
+			.toc-category {
+				break-inside: avoid;
+				list-style: none !important;
+				margin-bottom: 16px;
+				text-transform: none !important;
+			}
+
+			body main > ul.jump > li.toc-category:hover {
+				background: transparent;
+				color: #000;
+			}
+
+			.toc-category h2 {
+				font-family: "aktiv-grotesk", "alte_haas_grotesk_bold", "Helvetica Neue", Helvetica, Arial;
+				font-size: 18px;
+				line-height: 24px;
+				margin-bottom: 4px;
+			}
+
+			body main > ul.jump .toc-category li {
+				list-style-type: decimal;
+				list-style-position: inside;
+				text-transform: none;
+			}
+
+			body main > ul.jump .toc-category li:hover {
+				background: black;
+				color: white;
+			}
+
+			.item {
+				border-top: 2px solid #000;
+				padding-top: 22px;
+				margin-top: 28px;
+				max-width: 980px;
+			}
+
+			.item-header {
+				margin-bottom: 10px;
+			}
+
+			.item h2 {
+				font-size: 28px;
+				line-height: 34px;
+				margin: 0;
+			}
+
+			.item h2 a.back-to-top {
+				font-size: 14px;
+			}
+
+			.price {
+				font-family: "aktiv-grotesk", "alte_haas_grotesk_bold", "Helvetica Neue", Helvetica, Arial;
+				font-size: 18px;
+				line-height: 24px;
+				margin-top: 4px;
+			}
+
+			.item-details {
+				max-width: 760px;
+				margin: 12px 0;
+				font-size: 15px;
+				line-height: 22px;
+			}
+
+			.item-details li {
+				list-style-type: disc;
+				list-style-position: inside;
+			}
+
+			.detail-label {
+				font-weight: bold;
+			}
+
+			.description {
+				max-width: 760px;
+				font-size: 16px;
+				line-height: 24px;
+				margin: 12px 0 16px;
+			}
+
+			.photo-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+				gap: 10px;
+				max-width: 980px;
+				margin-top: 14px;
+			}
+
+			.photo-grid a {
+				display: block;
+				text-decoration: none;
+				background: #eee;
+			}
+
+			.photo-grid img {
+				display: block;
+				width: 100%;
+				height: 230px;
+				object-fit: contain;
+				background: #f5f5f5;
+			}
+
+			.empty-note {
+				font-size: 14px;
+				line-height: 20px;
+				color: #555;
+				margin-top: 10px;
+			}
+
+			@media (max-width: 900px) {
+				body main > ul.jump {
+					columns: 1;
+				}
+
+				.price {
+					font-size: 17px;
+				}
+
+				.photo-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.photo-grid img {
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+	<body class="Photography">
+		<main class="page" id="top">
+			<h1><b>Items for Sale</b></h1>
+			<p class="intro">
+				We're moving out at the end of August and selling everything listed below. Feel free to make us an offer, especially if you're interested in multiple things. You can text Lawrence at <b>845-652-3798</b> or email <a href="mailto:lawrencechillrud@gmail.com">lawrencechillrud@gmail.com</a> if interested in anything. Thanks!
+			</p>
+			<div id="status" class="status">Loading items...</div>
+			<ul class="jump" id="toc" aria-label="Table of contents"></ul>
+			<div id="items"></div>
+		</main>
+
+		<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+		<script>
+			const workbookPath = '../files/selling_table.xlsx';
+			const photoDir = '../media/stuff_to_sell_web/';
+			const maxNumberedPhotos = 12;
+			const categoryOrder = ['Living room', 'Kitchen', 'Office', 'Bathroom', 'Bedroom', 'Misc', 'Uncategorized'];
+
+			const columnNames = {
+				item: 'Item',
+				valueNew: 'Value new',
+				sellingFor: 'Selling for',
+				dimensions: 'Dimensions (LxWxH, inches)',
+				description: 'Description',
+				photoStem: 'Photofiles stem',
+				product: 'Link to product',
+				category: 'Category'
+			};
+
+			function clean(value) {
+				return value === undefined || value === null ? '' : String(value).trim();
+			}
+
+			function makeId(text, index) {
+				const base = clean(text)
+					.toLowerCase()
+					.replace(/&/g, 'and')
+					.replace(/[^a-z0-9]+/g, '-')
+					.replace(/^-+|-+$/g, '');
+
+				return base || `item-${index + 1}`;
+			}
+
+			function formatMoney(value, freeText) {
+				const text = clean(value);
+				if (!text) return '';
+
+				const number = Number(text.replace(/[$,]/g, ''));
+				if (!Number.isNaN(number)) {
+					if (number === 0 && freeText) return freeText;
+					return new Intl.NumberFormat('en-US', {
+						style: 'currency',
+						currency: 'USD',
+						maximumFractionDigits: 0
+					}).format(number);
+				}
+
+				return text;
+			}
+
+			function moneyValue(value) {
+				const text = clean(value);
+				if (!text) return Number.NEGATIVE_INFINITY;
+
+				const number = Number(text.replace(/[$,]/g, ''));
+				return Number.isNaN(number) ? Number.NEGATIVE_INFINITY : number;
+			}
+
+			function imageExists(src) {
+				return new Promise((resolve) => {
+					const img = new Image();
+					img.onload = () => resolve(true);
+					img.onerror = () => resolve(false);
+					img.src = src;
+				});
+			}
+
+			async function photoPathsForStem(stem) {
+				const base = clean(stem);
+				if (!base) return [];
+
+				const candidates = [`${photoDir}${base}.webp`];
+				for (let i = 1; i <= maxNumberedPhotos; i += 1) {
+					candidates.push(`${photoDir}${base}${i}.webp`);
+				}
+
+				const checks = await Promise.all(candidates.map(async (src) => ({
+					src,
+					exists: await imageExists(src)
+				})));
+
+				return checks.filter((check) => check.exists).map((check) => check.src);
+			}
+
+			function detail(label, value, url) {
+				const text = clean(value);
+				if (!text && !url) return '';
+
+				if (url) {
+					const linkText = text || 'Product link';
+					return `<li><span class="detail-label">${label}:</span> <a href="${escapeAttribute(url)}" target="_blank" rel="noopener">${escapeHtml(linkText)}</a></li>`;
+				}
+
+				return `<li><span class="detail-label">${label}:</span> ${escapeHtml(text)}</li>`;
+			}
+
+			function escapeHtml(text) {
+				return clean(text).replace(/[&<>"]/g, (character) => ({
+					'&': '&amp;',
+					'<': '&lt;',
+					'>': '&gt;',
+					'"': '&quot;'
+				}[character]));
+			}
+
+			function escapeAttribute(text) {
+				return escapeHtml(text).replace(/'/g, '&#39;');
+			}
+
+			function readCell(sheet, address) {
+				const cell = sheet[address];
+				return cell ? clean(cell.w || cell.v) : '';
+			}
+
+			function parseItems(workbook) {
+				const sheet = workbook.Sheets[workbook.SheetNames[0]];
+				const range = XLSX.utils.decode_range(sheet['!ref']);
+				const headers = new Map();
+
+				for (let col = range.s.c; col <= range.e.c; col += 1) {
+					const address = XLSX.utils.encode_cell({ r: range.s.r, c: col });
+					const header = readCell(sheet, address);
+					if (header) headers.set(header, col);
+				}
+
+				function value(row, headerName) {
+					if (!headers.has(headerName)) return '';
+					return readCell(sheet, XLSX.utils.encode_cell({ r: row, c: headers.get(headerName) }));
+				}
+
+				function hyperlink(row, headerName) {
+					if (!headers.has(headerName)) return '';
+					const cell = sheet[XLSX.utils.encode_cell({ r: row, c: headers.get(headerName) })];
+					return cell && cell.l ? clean(cell.l.Target || cell.l.target) : '';
+				}
+
+				const items = [];
+				for (let row = range.s.r + 1; row <= range.e.r; row += 1) {
+					const item = value(row, columnNames.item);
+					if (!item) continue;
+
+					items.push({
+						item,
+						valueNew: value(row, columnNames.valueNew),
+						sellingFor: value(row, columnNames.sellingFor),
+						dimensions: value(row, columnNames.dimensions),
+						description: value(row, columnNames.description),
+						photoStem: value(row, columnNames.photoStem),
+						productText: value(row, columnNames.product),
+						productUrl: hyperlink(row, columnNames.product),
+						category: value(row, columnNames.category) || 'Uncategorized',
+						id: makeId(item, items.length)
+					});
+				}
+
+				return items;
+			}
+
+			async function render(items) {
+				const toc = document.getElementById('toc');
+				const itemsContainer = document.getElementById('items');
+				const sortedItemsByCategory = items.reduce((sortedItems, item, index) => {
+					const categoryItems = sortedItems.get(item.category) || [];
+					categoryItems.push({ ...item, originalIndex: index });
+					sortedItems.set(item.category, categoryItems);
+					return sortedItems;
+				}, new Map());
+
+				const orderedCategories = [...sortedItemsByCategory.keys()].sort((a, b) => {
+					const aIndex = categoryOrder.indexOf(a);
+					const bIndex = categoryOrder.indexOf(b);
+					if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
+					if (aIndex === -1) return 1;
+					if (bIndex === -1) return -1;
+					return aIndex - bIndex;
+				});
+
+				for (const [category, categoryItems] of sortedItemsByCategory.entries()) {
+					sortedItemsByCategory.set(category, categoryItems.sort((a, b) => {
+						const priceDifference = moneyValue(b.sellingFor) - moneyValue(a.sellingFor);
+						return priceDifference || a.originalIndex - b.originalIndex;
+					}));
+				}
+
+				toc.innerHTML = orderedCategories.map((category) => `
+					<li class="toc-category">
+						<h2>${escapeHtml(category)}</h2>
+						<ol>
+							${sortedItemsByCategory.get(category).map((item) => `<li><a href="#${escapeAttribute(item.id)}">${escapeHtml(item.item)}</a></li>`).join('')}
+						</ol>
+					</li>`).join('');
+
+				const sortedItems = orderedCategories.flatMap((category) => sortedItemsByCategory.get(category) || []);
+				const rendered = await Promise.all(sortedItems.map(async (item) => {
+					const sellingFor = formatMoney(item.sellingFor, 'Free');
+					const valueNew = formatMoney(item.valueNew, '');
+					const photos = await photoPathsForStem(item.photoStem);
+					const details = [
+						valueNew ? detail('Value new', valueNew) : '',
+						item.dimensions ? detail('Dimensions (in)', item.dimensions) : '',
+						detail('Product link', item.productText, item.productUrl)
+					].filter(Boolean).join('');
+					const photoHtml = photos.length
+						? `<div class="photo-grid">${photos.map((src, photoIndex) => `
+							<a data-fancybox="gallery-${escapeAttribute(item.id)}" data-src="${escapeAttribute(src)}" data-caption="${escapeAttribute(item.item)}${photos.length > 1 ? ` (${photoIndex + 1} of ${photos.length})` : ''}">
+								<img src="${escapeAttribute(src)}" alt="${escapeAttribute(item.item)}${photos.length > 1 ? ` photo ${photoIndex + 1}` : ''}" loading="lazy">
+							</a>`).join('')}</div>`
+						: `<p class="empty-note">No photos found for stem <code>${escapeHtml(item.photoStem || 'blank')}</code>.</p>`;
+
+					return `
+						<section class="item" id="${escapeAttribute(item.id)}">
+							<div class="item-header">
+								<h2>${escapeHtml(item.item)} <a href="#top" class="back-to-top">return to table of contents</a></h2>
+								${sellingFor ? `<p class="price">Asking price: ${escapeHtml(sellingFor)}</p>` : ''}
+							</div>
+							${details ? `<ul class="item-details">${details}</ul>` : ''}
+							${item.description ? `<p class="description">${escapeHtml(item.description)}</p>` : ''}
+							${photoHtml}
+						</section>`;
+				}));
+
+				itemsContainer.innerHTML = rendered.join('');
+				Fancybox.bind('[data-fancybox]', {});
+			}
+
+			async function init() {
+				const status = document.getElementById('status');
+				try {
+					const response = await fetch(workbookPath);
+					if (!response.ok) throw new Error(`Could not load ${workbookPath}`);
+
+					const data = await response.arrayBuffer();
+					const workbook = XLSX.read(data, { type: 'array', cellHTML: false });
+					const items = parseItems(workbook);
+					if (!items.length) throw new Error('No items found in the spreadsheet.');
+
+					await render(items);
+					status.remove();
+				} catch (error) {
+					status.className = 'status error';
+					status.textContent = `Unable to load listings right now. ${error.message}`;
+				}
+			}
+
+			init();
+		</script>
+	</body>
+</html>
